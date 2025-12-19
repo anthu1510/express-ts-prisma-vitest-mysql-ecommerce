@@ -5,7 +5,7 @@ import {
   generateTokens,
   verifyAccessToken,
   verifyRefreshToken,
-} from "../../utils/jwt.utils";
+} from "../../src/utils/jwt.utils";
 
 // Mock the config
 vi.mock("../../src/config", () => ({

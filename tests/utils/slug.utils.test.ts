@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { generateSlug, generateUniqueSlug } from "../../utils/slug.utils";
+import { generateSlug, generateUniqueSlug } from "../../src/utils/slug.utils";
 
 describe("slug.utils", () => {
   describe("generateSlug", () => {

@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { hashPassword, comparePassword } from "../../utils/password.utils";
+import { hashPassword, comparePassword } from "../../src/utils/password.utils";
 
 describe("password.utils", () => {
   describe("hashPassword", () => {
