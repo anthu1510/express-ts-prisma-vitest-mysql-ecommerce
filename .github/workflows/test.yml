@@ -26,13 +26,13 @@ jobs:
       - name: Run tests
         run: npm run test:run
 
-      - name: Tests Passed ✅
+      - name: This PR All Tests Passed ✅
         if: success()
         run: |
           echo "::notice::All tests passed successfully! ✅"
           echo "## ✅ All Tests Passed!" >> $GITHUB_STEP_SUMMARY
 
-      - name: Tests Failed ❌
+      - name: This PR All Tests Failed ❌
         if: failure()
         run: |
           echo "::error::Some tests failed! ❌"
