@@ -19,22 +19,22 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: "yarn"
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
-
-      - name: Generate Prisma Client
-        run: yarn prisma:generate
+        run: npm install
 
       - name: Run tests
-        run: yarn test:run
+        run: npm run test:run
 
-      - name: Upload coverage report
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: coverage-report
-          path: coverage/
-          retention-days: 7
+      - name: This PR All Tests Passed ✅
+        if: success()
+        run: |
+          echo "::notice::All tests passed successfully! ✅"
+          echo "## ✅ All Tests Passed!" >> $GITHUB_STEP_SUMMARY
 
+      - name: This PR All Tests Failed ❌
+        if: failure()
+        run: |
+          echo "::error::Some tests failed! ❌"
+          echo "## ❌ Tests Failed!" >> $GITHUB_STEP_SUMMARY
+          echo "Please check the logs above for details." >> $GITHUB_STEP_SUMMARY

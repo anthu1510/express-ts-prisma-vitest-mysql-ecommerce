@@ -5,7 +5,7 @@
     "moduleResolution": "Node",
     "lib": ["ES2022"],
     "outDir": "./dist",
-    "rootDir": "./src",
+    "rootDir": ".",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -19,6 +19,6 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["src/**/*", "src/tests/**/*"],
+  "include": ["src/**/*", "tests/**/*", "index.ts"],
   "exclude": ["node_modules", "dist"]
 }
