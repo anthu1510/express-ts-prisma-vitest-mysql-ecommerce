@@ -1,0 +1,21 @@
+# Source files
+src/
+tests/
+prisma/
+
+# Config files
+tsconfig.json
+vitest.config.ts
+.env
+.env.*
+
+# Dev files
+*.log
+.DS_Store
+coverage/
+node_modules/
+
+# Git
+.git/
+.gitignore
+
